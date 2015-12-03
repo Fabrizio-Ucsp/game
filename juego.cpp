@@ -11,6 +11,9 @@ void juego::jugar(){
     printname();
     system("pause");
 	system("cls");
+	instrucciones();
+	gotox(15,15);system("pause");
+	system("cls");
 	hidecursor();
 	limites();
 	n1->impnav();
