@@ -49,6 +49,18 @@ void printname(){
 	gotox(15,8);cout<<"       | |                                                                      "<<endl;
 	gotox(15,9);cout<<"       |_|                                                                      "<<endl;
 }
+void instrucciones(){
+	gotox(15,2);cout<<"	 _____           _                       _                       "<<endl;
+	gotox(15,3);cout<<"	|_   _|         | |                     (_)                      "<<endl;
+	gotox(15,4);cout<<"	  | |  _ __  ___| |_ _ __ _   _  ___ ___ _  ___  _ __   ___  ___ "<<endl;
+	gotox(15,5);cout<<"	  | | |  _ \\/ __| __|  __| | | |/ __/ __| |/ _ \\|  _ \\ / _ \\/ __|"<<endl;
+	gotox(15,6);cout<<"	 _| |_| | | \\__ \\ |_| |  | |_| | (_| (__| | (_) | | | |  __/\\__ \\'"<<endl;
+	gotox(15,7);cout<<"	|_____|_| |_|___/\\__|_|   \\__,_|\\___\\___|_|\\___/|_| |_|\\___||___/"<<endl;
+	gotox(15,11);cout<<"1.- El objetivo es sobrevivir el mayor tiempo posible al espacio"<<endl;
+	gotox(15,12);cout<<"2.- Puede mover la nave usando las teclas 'w' , 'a' , 's' , 'd'"<<endl;
+	gotox(15,13);cout<<"3.- La nave puede disparar usando la tecla 'j' "<<endl;
+	
+}
 void gracias(){
 	gotox(15,2);cout<<" _____                _                                  ___                        "<<endl;
 	gotox(15,3);cout<<"|  __ \\              (_)                                |_  |                       "<<endl;
@@ -58,5 +70,8 @@ void gracias(){
 	gotox(15,7);cout<<" \\____/_|  \\__,_|\\___|_|\\__,_|___/ | .__/ \\___/|_|    \\____/ \\__,_|\\__, |\\__,_|_|   "<<endl;
 	gotox(15,8);cout<<"                                   | |                              __/ |           "<<endl;
 	gotox(15,9);cout<<"                                   |_|                             |___/            "<<endl;
-	
+	gotox(15,15);cout<<"Hecho por :"<<endl;
+	gotox(15,17);cout<<"- Rodrigo Sanchez Pinto"<<endl;
+	gotox(15,18);cout<<"- Fabrizio Flores Pari"<<endl;
+	gotox(15,23);cout<<" "<<endl;
 }
