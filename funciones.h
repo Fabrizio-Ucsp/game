@@ -5,4 +5,6 @@ void hidecursor();
 void limites();
 void gameendtxt(int);
 void printname();
+void instrucciones();
 void gracias();
+
