@@ -22,34 +22,34 @@ void juego::jugar(){
 			n1->mover(tecla);
 			if(tecla=='j'){B.push_back(new bala(n1->X()+7,n1->Y()+4));}
 		}
-		for(int it=0;it<B.size();it++){
-			(*B[it]).mover();
-			if((*B[it]).fuera()){
-				gotox((*B[it]).X(),(*B[it]).Y());cout<<" ";
-				delete(B[it]);
-				B.erase(B.begin()+it);
+		for(int i=0;i<B.size();i++){
+			(*B[i]).mover();
+			if((*B[i]).fuera()){
+				gotox((*B[i]).X(),(*B[i]).Y());cout<<" ";
+				delete(B[i]);
+				B.erase(B.begin()+i);
 			}
 		}
-		for(int it=0;it<astgroup.size();it++){
-			(*astgroup[it]).mover(char(184));
-			(*astgroup[it]).colision(*n1);
+		for(int i=0;i<astgroup.size();i++){
+			(*astgroup[i]).mover(char(184));
+			(*astgroup[i]).colision(*n1);
 		}
-		for(int itast=0;itast<astgroup.size();itast++){
-			for(int itbal=0;itbal<B.size();itbal++){
-				if((*astgroup[itast]).Y()==(*B[itbal]).Y()){
-					if((*astgroup[itast]).X()==(*B[itbal]).X() or (*astgroup[itast]).X()==(*B[itbal]).X()+1){
-						gotox((*B[itbal]).X(),(*B[itbal]).Y());cout<<" ";
-						delete(B[itbal]);
-						B.erase(B.begin()+itbal);
-						gotox((*astgroup[itast]).X(),(*astgroup[itast]).Y());cout<<" ";
-						(*astgroup[itast]).reload();
+		for(int i=0;i<astgroup.size();i++){
+			for(int j=0;j<B.size();j++){
+				if((*astgroup[i]).Y()==(*B[j]).Y()){
+					if((*astgroup[i]).X()==(*B[j]).X() or (*astgroup[i]).X()==(*B[j]).X()+1){
+						gotox((*B[j]).X(),(*B[j]).Y());cout<<" ";
+						delete(B[j]);
+						B.erase(B.begin()+j);
+						gotox((*astgroup[i]).X(),(*astgroup[i]).Y());cout<<" ";
+						(*astgroup[i]).reload();
 						score+=10;
 					}
 				}
 			}
 		}
 		if(lifeplus.enpantalla){
-            lifeplus.mover(char(64));
+            lifeplus.mover(char(3));
             lifeplus.colision(*n1);
 		}
 		if(score>masdif){
